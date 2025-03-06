@@ -1,5 +1,5 @@
 :root {
-    --form-padding-left: 2vw;
+    --form-padding-left: 3vw;
 }
 
 * {
@@ -23,7 +23,7 @@ padding: 0.75rem 1.5rem; /* Padding */
 border-radius: 5px; /* Rounded corners */
 cursor: pointer; /* Pointer cursor */
 width: fit-content;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 button:hover {
@@ -97,17 +97,19 @@ text-align: center;
     padding-bottom: 5vh;
 }
 
-.form-Body {
+.formBody {
     display: flex;
     flex-direction: column;
     height: 30%;
     width: 100%;
     background-color: whitesmoke;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    padding-left: var(--form-padding-left);
+    padding-top: 10px;
 }
 
 .footer {
-    padding-top: 5vh;
+    padding-top: 4vh;
     text-align: start;
     align-self: flex-start;
     padding-left: var(--form-padding-left);
@@ -127,11 +129,52 @@ text-align: center;
     position: absolute;
     display: flex;
     flex-direction: row;
-    background-color: hsl(0, 0%, 0%,60%);
+    background-color: hsl(0, 0%, 0%,0.5);
     width: 100%;
     height: 125px;
     /* margin-top: 16vh; */
-    top: 180px;
+    top: 190px;
     flex: none;
+}
 
+.formBody-title {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.dispRow {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    margin-bottom: 20px;
+}
+
+.dispCol {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="mail"],
+input[type="tel"],
+textarea {
+    background-color: whitesmoke;
+    border: 1px solid #d3d0d0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    height: 26px;
+    width: 20vw;
+
+}
+
+input:invalid {
+    box-shadow: 0 0 3px 1px rgb(243, 90, 90);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 3px 1px rgb(90, 100, 243);
 }
